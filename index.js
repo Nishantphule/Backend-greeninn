@@ -2,7 +2,7 @@ import express from "express";
 import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
 import cors from "cors"
-import { menuRouter } from "./routes/liquids.js";
+import { menuRouter } from "./routes/menuRouter.js";
 
 dotenv.config();
 // console.log(process.env)

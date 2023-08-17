@@ -85,11 +85,11 @@ router.get("/pizza&pasta&sandwiches", async (req, res) => {
 });
 
 // chat
-router.get("/chat", async (req, res) => {
+router.get("/chaat", async (req, res) => {
     try {
         const menu = await getAllMenu(req);
-        const chat = menu[5]
-        res.status(200).json(chat);
+        const chaat = menu[5].chaat
+        res.status(200).json({ chaat });
     } catch (error) {
         res.status(503).json({ message: "Internal Server Error" })
     }
