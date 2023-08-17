@@ -84,6 +84,17 @@ router.get("/pizza&pasta&sandwiches", async (req, res) => {
     }
 });
 
+// chat
+router.get("/chat", async (req, res) => {
+    try {
+        const menu = await getAllMenu(req);
+        const chat = menu[5]
+        res.status(200).json(chat);
+    } catch (error) {
+        res.status(503).json({ message: "Internal Server Error" })
+    }
+});
+
 // chinese
 router.get("/chinese", async (req, res) => {
     try {
